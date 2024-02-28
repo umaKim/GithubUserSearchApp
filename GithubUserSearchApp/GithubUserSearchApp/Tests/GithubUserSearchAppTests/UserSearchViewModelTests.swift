@@ -2,7 +2,6 @@ import XCTest
 import PresentationLayer
 import DomainLayer
 import Combine
-//@testable import GithubUserSearchApp
 
 class UserSearchViewModelTests: XCTestCase {
     var viewModel: UserSearchViewModel!
