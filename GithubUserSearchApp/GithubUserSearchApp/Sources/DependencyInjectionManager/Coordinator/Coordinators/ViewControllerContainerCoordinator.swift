@@ -21,7 +21,7 @@ final public class ViewControllerContainerCoordinator: Coordinator {
     
     public var childCoordinators: [Coordinator]
     
-    private var vc: ViewControllerContainerViewController?
+    private var viewController: ViewControllerContainerViewController?
     
     public init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -36,11 +36,11 @@ final public class ViewControllerContainerCoordinator: Coordinator {
                 
             }
             .store(in: &cancellables)
-        vc = module.viewController as? ViewControllerContainerViewController
+        viewController = module.viewController as? ViewControllerContainerViewController
         setChildCoordinators()
         
-        guard let vc else { return }
-        setRoot([vc])
+        guard let viewController else { return }
+        setRoot([viewController])
     }
 }
 
@@ -67,29 +67,17 @@ extension ViewControllerContainerCoordinator {
         addChild(coordinator: localSearchCoordinator)
         localSearchCoordinator.start()
         
-        let localSearchCoordinator2 = LocalSearchCoordinator(navigationController)
-        localSearchCoordinator2
-            .didFinishPublisher
-            .sink {[weak self] _ in
-                self?.childCoordinators.forEach({ self?.removeChild(coordinator: $0) })
-            }
-            .store(in: &cancellables)
-        addChild(coordinator: localSearchCoordinator2)
-        localSearchCoordinator2.start()
-        
         guard
             let userSearchViewController = userSearchCoordinator.viewController as? UserSearchViewController,
-            let localSearchViewController = localSearchCoordinator.viewController as? LocalSearchViewController,
-            let localSearchViewController2 = localSearchCoordinator2.viewController as? LocalSearchViewController
+            let localSearchViewController = localSearchCoordinator.viewController as? LocalSearchViewController
         else { return }
         
         userSearchViewController.viewModel.listener = localSearchViewController.viewModel
         localSearchViewController.viewModel.listener = userSearchViewController.viewModel
         
-        vc?.setChildViewControllers(
+        viewController?.setChildViewControllers(
             userSearchViewController,
-            localSearchViewController,
-            localSearchViewController2
+            localSearchViewController
         )
     }
 }

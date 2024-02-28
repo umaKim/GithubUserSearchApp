@@ -29,9 +29,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 }
-
-
-//{(
-//    DomainLayer.UserDomain(name: "antiface", id: 1619852, avatarUrl: "https://avatars.githubusercontent.com/u/1619852?v=4", htmlUrl: "https://github.com/antiface", isFavorite: false),
-//    DomainLayer.UserDomain(name: "magician11", id: 3735849, avatarUrl: "https://avatars.githubusercontent.com/u/3735849?v=4", htmlUrl: "https://github.com/magician11", isFavorite: false)
-//)}'

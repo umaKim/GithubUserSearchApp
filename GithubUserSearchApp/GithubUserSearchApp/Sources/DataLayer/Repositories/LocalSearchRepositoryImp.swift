@@ -21,12 +21,9 @@ final public class LocalSearchRepositoryImp: LocalSearchRepository {
         guard let data = persistenceManager.read(with: UserDefaultsKey.userList.rawValue) else {
             return Just([]).setFailureType(to: Error.self).eraseToAnyPublisher()
         }
-        do {
-            let favoriteUsers = try JSONDecoder().decode([UserDomain].self, from: data)
-            return Just(favoriteUsers).setFailureType(to: Error.self).eraseToAnyPublisher()
-        } catch {
-            return Fail(error: error).eraseToAnyPublisher()
-        }
+        return Just(data)
+            .decode(type: [UserDomain].self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
     }
     
     public func saveUser(_ user: UserDomain) -> AnyPublisher<Bool, Error> {
@@ -55,7 +52,9 @@ extension LocalSearchRepositoryImp {
         do {
             let encodedData = try JSONEncoder().encode(users)
             persistenceManager.save(data: encodedData, with: UserDefaultsKey.userList.rawValue)
-            return Just(true).setFailureType(to: Error.self).eraseToAnyPublisher()
+            return Just(true)
+                .setFailureType(to: Error.self)
+                .eraseToAnyPublisher()
         } catch {
             return Fail(error: error).eraseToAnyPublisher()
         }
