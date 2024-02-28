@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "819ADB21-D034-4586-947D-22FFD69C9CDD"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F7ED9C8-4559-4D6C-8B27-7D89B77B8C17"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GithubUserSearchApp/DataLayer/URLSessionNetworkManager/URLSessionNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "request(url:headers:method:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A93B6E16-7D17-4B08-A552-1EA70B27BF4E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GithubUserSearchApp/PresentationLayer/Bases/BaseViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "BaseViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5062B039-DB95-41DD-A3F9-F8F4366100BC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GithubUserSearchApp/GithubUserSearchApp/Sources/PresentationLayer/LocalSearchFeature/LocalSearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "userSearchViewModelDidTapStarButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5062B039-DB95-41DD-A3F9-F8F4366100BC - df979701c53e8eec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PresentationLayer.LocalSearchViewModel.userSearchViewModelDidTapStarButton(DomainLayer.UserDomain) -&gt; ()"
+                  moduleName = "GithubUserSearchApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim-yoonsuk/Documents/GitHub/GithubUserSearchApp/GithubUserSearchApp/GithubUserSearchApp/Sources/PresentationLayer/LocalSearchFeature/LocalSearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  uuid = "5062B039-DB95-41DD-A3F9-F8F4366100BC - df979701c53e8eec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PresentationLayer.LocalSearchViewModel.userSearchViewModelDidTapStarButton(DomainLayer.UserDomain) -&gt; ()"
+                  moduleName = "GithubUserSearchApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim-yoonsuk/Documents/GitHub/GithubUserSearchApp/GithubUserSearchApp/GithubUserSearchApp/Sources/PresentationLayer/LocalSearchFeature/LocalSearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "272">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32E01D95-8A7B-4197-8D46-2088AEB05CDE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GithubUserSearchApp/GithubUserSearchApp/Sources/PresentationLayer/LocalSearchFeature/LocalSearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "fetchUsers()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "32E01D95-8A7B-4197-8D46-2088AEB05CDE - cee20018ffddd495"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PresentationLayer.LocalSearchViewModel.updateFilteredUsers() -&gt; ()"
+                  moduleName = "GithubUserSearchApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim-yoonsuk/Documents/GitHub/GithubUserSearchApp/GithubUserSearchApp/GithubUserSearchApp/Sources/PresentationLayer/LocalSearchFeature/LocalSearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "32E01D95-8A7B-4197-8D46-2088AEB05CDE - 54d679239a96fbc5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;DomainLayer.UserDomain&gt;) -&gt; () in PresentationLayer.LocalSearchViewModel.fetchUsers() -&gt; ()"
+                  moduleName = "GithubUserSearchApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim-yoonsuk/Documents/GitHub/GithubUserSearchApp/GithubUserSearchApp/GithubUserSearchApp/Sources/PresentationLayer/LocalSearchFeature/LocalSearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51948E27-761B-4A77-BAB4-064DFDDD96AC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GithubUserSearchApp/GithubUserSearchApp/Sources/PresentationLayer/LocalSearchFeature/LocalSearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "didTapStarButton(user:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
