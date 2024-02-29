@@ -1,4 +1,4 @@
-<img width="986" alt="스크린샷 2024-02-28 오후 3 23 23" src="https://github.com/umaKim/GithubUserSearchApp/assets/85341050/d907b691-a6f2-4851-a274-156c4403ecde">
+<img width="1570" alt="스크린샷 2024-02-28 오후 3 23 23" src="https://github.com/umaKim/GithubUserSearchApp/assets/85341050/d907b691-a6f2-4851-a274-156c4403ecde">
 
 <img width="1570" alt="스크린샷 2024-02-28 오후 3 23 14" src="https://github.com/umaKim/GithubUserSearchApp/assets/85341050/dab71191-bb0f-42d5-8352-bd4ea0b50de2">
 
@@ -16,7 +16,7 @@ API를 통해 데이터를 가져오는 기능의 ViewModel은 페이지네이�
 핵심 ViewModel들의 Test Code Coverage
 
 <img width="621" alt="스크린샷 2024-02-28 오후 3 30 10" src="https://github.com/umaKim/GithubUserSearchApp/assets/85341050/d6872d2a-33bc-4195-af96-e9e2c9242bb2">
-<img width="609" alt="스크린샷 2024-02-28 오후 3 30 27" src="https://github.com/umaKim/GithubUserSearchApp/assets/85341050/d894ac0b-5b72-4329-ab6e-97e42188d436">
+<img width="621" alt="스크린샷 2024-02-28 오후 3 30 27" src="https://github.com/umaKim/GithubUserSearchApp/assets/85341050/d894ac0b-5b72-4329-ab6e-97e42188d436">
 
 ### 문제 해결 4. 중복 코드 제거
 이 앱은 유사한 기능을 가진 두 개의 기능을 포함하고 있어, 중복 코드가 발생합니다. 이를 해결하기 위해 ViewController에서 View를 따로 분리했고, 두개의 다른 ViewController에서 해당 View를 재활용할수 있게 했습니다. 그리고 Subscript를 적극 활용하여 특정 요소의 인덱스를 찾거나 배열의 인덱스에 값을 할당하는 로직을 Subscript로 분리함으로써 반복되는 코드를 간소화했습니다.
