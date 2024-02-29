@@ -19,7 +19,7 @@ public protocol LocalSearchViewModelInput {
     func onViewDidLoad()
     func didChangeQuery(query: String)
     func didTapStarButton(user: UserDomain)
-    func didSelectItem(at index: Int)
+    func didSelectItem(at indexIndexPath: IndexPath)
 }
 
 public protocol LocalSearchViewModelOutput {

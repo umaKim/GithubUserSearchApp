@@ -123,7 +123,7 @@ extension LocalSearchViewController {
 extension LocalSearchViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        viewModel.didSelectItem(at: indexPath.item)
+        viewModel.didSelectItem(at: indexPath)
     }
 }
 

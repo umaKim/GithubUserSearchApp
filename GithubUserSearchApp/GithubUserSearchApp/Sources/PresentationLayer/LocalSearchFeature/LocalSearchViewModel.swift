@@ -79,8 +79,8 @@ extension LocalSearchViewModel {
             .store(in: &cancellables)
     }
     
-    public func didSelectItem(at index: Int) {
-        guard let urlString = users[safe: index]?.htmlUrl else { return }
+    public func didSelectItem(at indexPath: IndexPath) {
+        guard let urlString = usersDictionary[userAt: indexPath]?.htmlUrl else { return }
         if let url = URL(string: urlString) {
             transitionSubject.send(.showGitHugPage(url))
         } else {
