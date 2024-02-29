@@ -1,5 +1,6 @@
-<img width="1570" alt="스크린샷 2024-02-28 오후 3 23 14" src="https://github.com/umaKim/GithubUserSearchApp/assets/85341050/dab71191-bb0f-42d5-8352-bd4ea0b50de2">
 <img width="986" alt="스크린샷 2024-02-28 오후 3 23 23" src="https://github.com/umaKim/GithubUserSearchApp/assets/85341050/d907b691-a6f2-4851-a274-156c4403ecde">
+
+<img width="1570" alt="스크린샷 2024-02-28 오후 3 23 14" src="https://github.com/umaKim/GithubUserSearchApp/assets/85341050/dab71191-bb0f-42d5-8352-bd4ea0b50de2">
 
 Architecture: MVVM-C
 
