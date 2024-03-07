@@ -9,7 +9,8 @@ import DomainLayer
 import Foundation
 
 public extension Array where Element == UserDomain {
-    subscript(indexOf id: Int) -> UserDomain? {
+    typealias ID = Int
+    subscript(indexOf id: ID) -> UserDomain? {
         get {
             let index = self.firstIndex { element in
                 element.id == id

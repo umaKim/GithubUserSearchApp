@@ -184,8 +184,8 @@ class LocalSearchViewModelTests: XCTestCase {
     // - testDidSelectItem을 해서 transitionPublisher로 선택한 url을 뱉어내는가?
     func testDidSelectItem() {
         let expecation = expectation(description: "")
-        
-        let targetItem = MockLocalContainerDomain.users[1]
+    
+        let indexPath = IndexPath(row: 0, section: 0)
         
         var doesMatch = false
         
@@ -194,7 +194,9 @@ class LocalSearchViewModelTests: XCTestCase {
             .sink { transition in
                 switch transition {
                 case .showGitHugPage(let url):
-                    doesMatch = url == URL(string: targetItem.htmlUrl)
+                    let item = self.viewModel.usersDictionary[userAt: indexPath]
+                    let targetItem = MockLocalContainerDomain.users[indexOf: item!.id]
+                    doesMatch = url == URL(string: targetItem!.htmlUrl)
                     expecation.fulfill()
                 }
             }
@@ -203,7 +205,7 @@ class LocalSearchViewModelTests: XCTestCase {
         viewModel.onViewDidLoad()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.viewModel.didSelectItem(at: IndexPath(row: 0, section: 0))
+            self.viewModel.didSelectItem(at: indexPath)
         }
         
         wait(for: [expecation], timeout: 1)
