@@ -185,7 +185,7 @@ class LocalSearchViewModelTests: XCTestCase {
     func testDidSelectItem() {
         let expecation = expectation(description: "")
         
-        let targetItem = MockLocalContainerDomain.users[0]
+        let targetItem = MockLocalContainerDomain.users[1]
         
         var doesMatch = false
         
@@ -203,7 +203,7 @@ class LocalSearchViewModelTests: XCTestCase {
         viewModel.onViewDidLoad()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.viewModel.didSelectItem(at: 0)
+            self.viewModel.didSelectItem(at: IndexPath(row: 0, section: 0))
         }
         
         wait(for: [expecation], timeout: 1)
