@@ -138,7 +138,6 @@ extension UserSearchViewModel {
             .store(in: &cancellables)
     }
     
-    @discardableResult
     private func toggleFavoriteStatus(of user: UserDomain) -> UserDomain? {
         guard var updateUser = users[indexOf: user.id] else { return nil }
         updateUser.isFavorite.toggle()

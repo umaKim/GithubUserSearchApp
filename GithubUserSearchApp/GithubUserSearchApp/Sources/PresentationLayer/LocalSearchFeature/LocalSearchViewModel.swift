@@ -113,7 +113,6 @@ private extension LocalSearchViewModel {
         notifySubject.send(.reload)
     }
     
-    @discardableResult
     private func toggleFavoriteStatus(of user: UserDomain) -> UserDomain? {
         guard var updateUser = users[indexOf: user.id] else { return nil }
         updateUser.isFavorite.toggle()

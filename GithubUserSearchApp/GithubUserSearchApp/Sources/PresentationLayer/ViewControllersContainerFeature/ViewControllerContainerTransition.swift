@@ -7,6 +7,4 @@
 
 import Foundation
 
-public enum ViewControllerContainerTransition: Transition {
-    
-}
+public enum ViewControllerContainerTransition: Transition { }
