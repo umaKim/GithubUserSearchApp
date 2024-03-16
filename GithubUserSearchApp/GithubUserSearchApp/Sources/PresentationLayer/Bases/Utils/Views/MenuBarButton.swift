@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MenuBarButton: UIButton {
+final public class MenuBarButton: UIButton {
     init(title: String, font: CGFloat = 20) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false

@@ -25,11 +25,11 @@ extension NetworkManager {
             .tryMap {[weak self] data, response in
                 guard let self else { throw URLSessionNetworkServiceError.unknownError }
                 guard let httpResponse = response as? HTTPURLResponse else {
-                    throw URLSessionNetworkServiceError.unknownError
+                    throw URLSessionNetworkServiceError.timeoutError
                 }
                 
                 guard 200...299 ~= httpResponse.statusCode else {
-                    throw self.configureHTTPError(errorCode: httpResponse.statusCode)
+                    throw configureHTTPError(errorCode: httpResponse.statusCode)
                 }
                 
                 return data

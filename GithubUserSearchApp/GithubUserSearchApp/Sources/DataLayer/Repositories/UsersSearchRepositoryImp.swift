@@ -30,6 +30,7 @@ final public class UsersSearchRepositoryImp: UsersSearchRepository, UrlConfigura
                 "page" : "\(page)"
             ]
         )
+        
         return urlSessionNetwork.fetch(from: url)
             .decode(type: UserEntityResponse.self, decoder: JSONDecoder())
             .zip(fetchFavoriteUsers())
