@@ -51,7 +51,7 @@ final class MenuBarView: UIView {
     }
     
     private func setupUI() {
-        setAlpha(for: buttons[0])
+        setAlpha(for: buttons[safe:0])
         
         backgroundColor = .systemBackground
         
