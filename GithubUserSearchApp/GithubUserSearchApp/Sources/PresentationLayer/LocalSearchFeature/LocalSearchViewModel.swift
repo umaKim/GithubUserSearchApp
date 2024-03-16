@@ -12,7 +12,7 @@ import Foundation
 final public class LocalSearchViewModel {
     
     private(set) lazy public var transitionPublisher = transitionSubject.eraseToAnyPublisher()
-    private let transitionSubject = PassthroughSubject<UserSearchTransition, Never>()
+    private let transitionSubject = PassthroughSubject<LocalSearchTransition, Never>()
     
     public lazy var notifyPublisher = notifySubject.eraseToAnyPublisher()
     private let notifySubject = PassthroughSubject<UserSearchNotifyType, Never>()

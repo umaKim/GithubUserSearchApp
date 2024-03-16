@@ -8,5 +8,5 @@
 import Foundation
 
 public enum LocalSearchTransition: Transition {
-    
+    case showGitHugPage(URL)
 }
