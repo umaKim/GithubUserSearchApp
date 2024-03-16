@@ -226,8 +226,7 @@ class LocalSearchViewModelTests: XCTestCase {
                 itemsPerPage: MockUserContainerDomain.containerFirstPage.users.count
             )
         )
-        userSearchViewModel.listener = viewModel
-        
+        userSearchViewModel.listener.addDelegate(viewModel)
         userSearchViewModel.didChangeQuery(query: "a")
                 
         viewModel.onViewDidLoad()
@@ -258,7 +257,7 @@ class LocalSearchViewModelTests: XCTestCase {
                 itemsPerPage: MockUserContainerDomain.containerFirstPage.users.count
             )
         )
-        otherViewModel.listener = viewModel
+        otherViewModel.listener.addDelegate(viewModel)
         
         otherViewModel.didChangeQuery(query: "a")
         

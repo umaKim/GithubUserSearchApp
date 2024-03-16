@@ -14,7 +14,7 @@ public protocol LocalSearchViewmodelListener: AnyObject {
 }
 
 public protocol LocalSearchViewModelInput {
-    var listener: LocalSearchViewmodelListener? { get set }
+    var listener: MulticastDelegate<LocalSearchViewmodelListener> { get }
     
     func onViewDidLoad()
     func didChangeQuery(query: String)

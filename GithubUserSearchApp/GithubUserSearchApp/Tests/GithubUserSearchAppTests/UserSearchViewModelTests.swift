@@ -187,7 +187,7 @@ class UserSearchViewModelTests: XCTestCase {
         
         let repo = MockLocalSearchRepository()
         let localViewModel = LocalSearchViewModel(repository: repo)
-        localViewModel.listener = viewModel
+        localViewModel.listener.addDelegate(viewModel)
         
         localViewModel.onViewDidLoad()
         

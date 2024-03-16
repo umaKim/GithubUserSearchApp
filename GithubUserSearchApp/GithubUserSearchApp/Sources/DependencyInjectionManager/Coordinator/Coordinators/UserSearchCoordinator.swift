@@ -8,6 +8,7 @@
 import SafariServices
 import Combine
 import UIKit
+import PresentationLayer
 
 final public class UserSearchCoordinator: Coordinator {
     private(set) lazy public var didFinishPublisher: AnyPublisher<Void, Never> = didFinishSubject.eraseToAnyPublisher()
@@ -19,7 +20,7 @@ final public class UserSearchCoordinator: Coordinator {
     
     public var childCoordinators: [Coordinator]
     
-    private(set) var viewController: UIViewController?
+    private(set) var viewController: UserSearchViewController?
     
     public init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController

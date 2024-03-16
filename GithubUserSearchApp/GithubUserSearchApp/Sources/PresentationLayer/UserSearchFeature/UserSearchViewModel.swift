@@ -33,7 +33,7 @@ final public class UserSearchViewModel  {
     private var query: String = ""
     private var isLoading: Bool = false
     
-    weak public var listener: UserSearchViewModelListener?
+    public var listener = MulticastDelegate<UserSearchViewModelListener>()
     
     public init(repository: UsersSearchRepository, paginator: Paginator) {
         self.repository = repository
@@ -93,7 +93,9 @@ extension UserSearchViewModel {
                 }
             }, receiveValue: { [weak self] _ in
                 self?.notifySubject.send(.reload)
-                self?.listener?.userSearchViewModelDidTapStarButton(updatedUser)
+                self?.listener.invokeDelegates({ listener in
+                    listener.userSearchViewModelDidTapStarButton(updatedUser)
+                })
             })
             .store(in: &cancellables)
     }

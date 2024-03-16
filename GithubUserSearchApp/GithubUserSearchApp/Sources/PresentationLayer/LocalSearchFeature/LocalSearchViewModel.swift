@@ -11,8 +11,6 @@ import Foundation
 
 final public class LocalSearchViewModel {
     
-    public weak var listener: LocalSearchViewmodelListener?
-    
     private(set) lazy public var transitionPublisher = transitionSubject.eraseToAnyPublisher()
     private let transitionSubject = PassthroughSubject<UserSearchTransition, Never>()
     
@@ -31,6 +29,8 @@ final public class LocalSearchViewModel {
             updateFilteredUsers()
         }
     }
+    
+    public var listener = MulticastDelegate<LocalSearchViewmodelListener>()
     
     public private(set) var usersDictionary: [String: [UserDomain]] = [:]
     private let repository: LocalSearchRepository
@@ -74,7 +74,9 @@ extension LocalSearchViewModel {
                     self?.notifySubject.send(.error(.error(error.localizedDescription)))
                 }
             }, receiveValue: { [weak self] _ in
-                self?.listener?.localSearchViewModelDidTapStarButton(updatedUser)
+                self?.listener.invokeDelegates({ listener in
+                    listener.localSearchViewModelDidTapStarButton(updatedUser)
+                })
             })
             .store(in: &cancellables)
     }

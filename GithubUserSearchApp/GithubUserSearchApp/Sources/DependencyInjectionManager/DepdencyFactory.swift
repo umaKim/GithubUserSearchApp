@@ -20,7 +20,7 @@ public struct DependencyFactoryImp {
         )
     }
     
-    static func buildUserSearchFeature() -> Module<UserSearchTransition, UIViewController> {
+    static func buildUserSearchFeature() -> Module<UserSearchTransition, UserSearchViewController> {
         let repository = UsersSearchRepositoryImp(
             urlSessionNetwork: NetworkManager(),
             persistanceManager: PersistanceStore()
@@ -36,7 +36,7 @@ public struct DependencyFactoryImp {
         )
     }
     
-    static func buildLocalSearchFeature() -> Module<UserSearchTransition, UIViewController> {
+    static func buildLocalSearchFeature() -> Module<LocalSearchTransition, LocalSearchViewController> {
         let repository = LocalSearchRepositoryImp(
             persistenceManager: PersistanceStore()
         )

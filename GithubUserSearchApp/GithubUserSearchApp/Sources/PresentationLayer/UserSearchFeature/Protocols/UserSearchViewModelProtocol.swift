@@ -14,7 +14,7 @@ public protocol UserSearchViewModelListener: AnyObject {
 }
 
 public protocol UserSearchViewModelInput {
-    var listener: UserSearchViewModelListener? { get set }
+    var listener: MulticastDelegate<UserSearchViewModelListener> { get }
     
     func fetchNextPage()
     func didChangeQuery(query: String)

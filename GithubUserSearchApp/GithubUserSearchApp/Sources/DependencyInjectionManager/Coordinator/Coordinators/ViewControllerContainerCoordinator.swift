@@ -15,8 +15,6 @@ final public class ViewControllerContainerCoordinator: Coordinator {
     
     private var cancellables: Set<AnyCancellable> = Set<AnyCancellable>()
     
-    var transitionPublisher: AnyPublisher<ViewControllerContainerTransition, Never>?
-    
     public var navigationController: UINavigationController
     
     public var childCoordinators: [Coordinator]
@@ -68,12 +66,12 @@ extension ViewControllerContainerCoordinator {
         localSearchCoordinator.start()
         
         guard
-            let userSearchViewController = userSearchCoordinator.viewController as? UserSearchViewController,
-            let localSearchViewController = localSearchCoordinator.viewController as? LocalSearchViewController
+            let userSearchViewController = userSearchCoordinator.viewController,
+            let localSearchViewController = localSearchCoordinator.viewController
         else { return }
         
-        userSearchViewController.viewModel.listener = localSearchViewController.viewModel
-        localSearchViewController.viewModel.listener = userSearchViewController.viewModel
+        userSearchViewController.viewModel.listener.addDelegate(localSearchViewController.viewModel)
+        localSearchViewController.viewModel.listener.addDelegate(localSearchViewController.viewModel)
         
         viewController?.setChildViewControllers(
             userSearchViewController,
